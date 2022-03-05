@@ -1,0 +1,14 @@
+1. Run the tests Quiz2DefaultTest.java.
+2. Fix Planet.java, InhabitedPlanet.java, and LocationFormatting.java so that all tests pass. You should not modify Quiz2DefaultTest.java.
+3. Submit the corrected files following the general submission instructions.
+
+Tip: You will need to correct some syntax errors before the tests can be run.
+
+Tip: We will use the same tests provided in Quiz2DefaultTest.java to mark your code. Your grade will be based on the number of tests passed when run against the test file. Therefore, ALL syntax errors must be corrected to receive any points.
+
+You may receive zero if:
+- Any submitted Java file does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration (edu.ucalgary.ensf409)
+- You do not submit all required files: Planet.java, InhabitedPlanet.java, and LocationFormatting.java
+- You submit any files other than the required files. DO NOT SUBMIT Quiz2DefaultTest.java!
