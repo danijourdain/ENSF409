@@ -168,6 +168,7 @@ public class NewFeatureTest {
             passed = true;
         }
         catch (Exception e) { }
+
         assertTrue("VisitorParking 2-argument addVisitorReservation did not throw IllegalArgumentException when attempting a third reservation on the same date", passed);
 
         // Try without specifying a date
