@@ -1,0 +1,61 @@
+** Instructions **
+
+1. Write a class, StitchPattern.java, which passes the tests provided in the supplied DefaultTest.java.
+2. Submit only StitchPattern.java, according to the general submission instructions.
+
+You may receive zero if:
+- The submitted Java file does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration (edu.ucalgary.ensf409)
+- You submit any files other than the required file. DO NOT SUBMIT the test file!
+
+The tests which will be used to evaluate your code are not identical to the ones provided. We will test the same functionality, but using different values. For example, if a provided test makes a call such as:
+    object1.addTogether(4, -50);
+The actual test might use different values, for instance:
+    object1.addTogether(-14, 5);
+
+
+** Tips **
+
+1. Read the specifications to understand the problem.
+
+2. Identify which methods are needed by reading the comments in the test file.
+
+3. Write stub code for each method. Ensure that the method takes the expected parameter(s) and returns a value of the correct type, but do not implement any logic. This ensures that the code can be compiled against the tests, which allows you to begin implementing logic to pass the tests.
+
+4. Implement constructors, getters and setters - they are generally easy to implement and are used by most tests.
+
+5. Prioritize implementation based on how frequently methods are used in tests (the more it is used, the more important it is) and the relative difficulty of implementing the tests.
+
+
+** Specifications **
+
+Your program should be able to read in a text file, which is provided to the constructor as a File object. The text file represents a stitching pattern. 
+You should be able to produce larger patterns, based on a horizontal mirror, vertical mirror, or both. 
+
+You may assume that:
+- Any whitespace is meaningful (e.g., whitespace does not need to be removed)
+- The pattern may use any valid Character to represent stitches (e.g., [ and Ø are both valid)
+- Patterns can be any number of characters wide or number of rows in height
+
+Example input data:
+    Ø.R
+    ,Xk
+
+Example horizontal mirrored output: 
+Note that the original pattern is to the right, the mirror is to the left.
+    R.ØØ.R
+    kX,,Xk
+
+Example vertical mirror output:
+Note that the original pattern is below, and the mirror is above.
+    ,Xk
+    Ø.R
+    Ø.R
+    ,Xk
+    
+Example both mirror output:
+    kX,,Xk
+    R.ØØ.R
+    R.ØØ.R
+    kX,,Xk

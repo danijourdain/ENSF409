@@ -1,0 +1,69 @@
+** Instructions ** (This section will only change the names of the files in the actual Quiz)
+
+1. Write a class, BibReader.java, which passes the tests provided in the supplied ExampleTest.java.
+2. Submit only BibReader.java, according to the general submission instructions.
+
+You may receive zero if:
+- The submitted Java file does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration (edu.ucalgary.ensf409)
+- You submit any files other than the required file. DO NOT SUBMIT the test file!
+
+The tests which will be used to evaluate your code are not identical to the ones provided. We will test the same functionality, but using different values. For example, if a provided test makes a call such as:
+    object1.addTogether(4, -50);
+The actual test might use different values, for instance:
+    object1.addTogether(-14, 5);
+
+
+** Tips ** (This section will not change in the actual Quiz)
+
+1. Read the specifications to understand the problem.
+
+2. Identify which methods are needed by reading the comments in the test file.
+
+3. Write stub code for each method. Ensure that the method takes the expected parameter(s) and returns a value of the correct type, but do not implement any logic. This ensures that the code can be compiled against the tests, which allows you to begin implementing logic to pass the tests.
+
+4. Implement constructors, getters and setters - they are generally easy to implement and are used by most tests.
+
+5. Prioritize implementation based on how frequently methods are used in tests (the more it is used, the more important it is) and the relative difficulty of implementing the tests.
+
+
+** Specifications ** (This section will be different in the actual Quiz)
+
+Your program should be able to read in a text file, which is provided to the constructor as a File object. The text file is in the BibTeX format. You should be able to identify the first title, year, and author to appear in the file.
+
+You may assume that:
+- Each attribute (such as title, year, and author) will be on a line by itself.
+- The format for an attribute will always be: attribute={value}
+
+Example input:
+    @article{baltes:2020:sampling,
+      title={Sampling in software engineering research: A critical review and guidelines},
+      author={Baltes, Sebastian and Ralph, Paul},
+      booktitle={arXiv preprint arXiv:2002.07764},
+      year={2021}
+    }
+Expected values:
+    author: Baltes, Sebastian and Ralph, Paul
+    year: 2021
+    title: Sampling in software engineering research: A critical review and guidelines
+Note that:
+- Year must come from the year attribute, not the first line
+
+
+Example input:
+    @article{malcom2012impact,
+      TITLE = { The impact of undergraduate debt on the graduate school enrollment of STEM baccalaureates },
+      AUTHOR = {Malcom, Lindsey E and Dowd, Alicia C },
+      YEAR = { 2012 },
+      YEAR = {2013}
+    }
+Expected values:
+    author: Malcom, Lindsey E and Dowd, Alicia C
+    year: 2012
+    title: The impact of undergraduate debt on the graduate school enrollment of STEM baccalaureates
+Note that:
+- attribute names are case-insensitive - 'YEAR' is the same as 'year'
+- there may be arbitrary whitespace - This example has spaces before and after the = sign
+- any whitespace before or after the value should be removed - the year is '2012' not ' 2012 '
+- only the first appearance of an attribute should be used - the year is '2012' not '2013'
